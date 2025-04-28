@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "type": "module",
+  "repository": "https://github.com/dimaMachina/graphiql-esm.sh",
+  "author": "Dimitri POSTOLOV <dmytropostolov@gmail.com> (https://dimaMachina.com)",
+  "scripts": {
+    "start": "live-server example --port 1337",
+    "lint:prettier": "prettier --cache --check .",
+    "prettier": "pnpm lint:prettier --write"
+  },
+  "license": "MIT",
+  "description": "An example of using GraphiQL with an ESM-based CDN esm.sh",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.5.3"
+  },
+  "packageManager": "pnpm@10.9.0"
+}
