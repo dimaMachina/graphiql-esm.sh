@@ -9,6 +9,8 @@
 
 ## Setup
 
+Follow the steps below, and you'll have a fully functional GraphiQL 4 instance running with React 19 — without any UMD build needed!
+
 ### 1. Add styles
 
 Include the GraphiQL stylesheet:
@@ -105,10 +107,6 @@ This will start a local server and open the demo in your browser.
 >   // We don't need to actually do anything here - the fallback is the existing `isPropValid`.
 > }
 > ```
-
-## Final Result
-
-At the end, you will have a fully functional GraphiQL 4 instance running with React 19 — **without any UMD build needed**!
 
 ## 📚 Resources
 
