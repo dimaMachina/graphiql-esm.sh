@@ -70,6 +70,20 @@ To simplify imports, you can use [Import Maps](https://esm.sh/#using-import-maps
 </script>
 ```
 
+## Example
+
+You can try a working version of this setup in [examples/index.html](./examples/index.html).
+
+To run the example locally:
+
+```bash
+pnpm start
+```
+
+This will start a local server and open the demo in your browser.
+
+> Make sure you have dependency installed by running `pnpm i`.
+
 ## Notes
 
 > [!NOTE]  
