@@ -66,7 +66,7 @@ via [import maps](https://esm.sh/#using-import-maps).
 </script>
 ```
 
-> [!INFO]
+> [!NOTE]
 >
 > You can ignore error in console saying `module "@emotion/is-prop-valid" not found`.
 >
