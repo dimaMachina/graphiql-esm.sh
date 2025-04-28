@@ -76,7 +76,7 @@ You can try a working version of this setup in [examples/index.html](./examples/
 
 To run the example locally:
 
-```bash
+```sh
 pnpm start
 ```
 
