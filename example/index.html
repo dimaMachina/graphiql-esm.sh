@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GraphiQL 4 with React 19</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden; /* in Firefox */
+      }
+
+      #graphiql {
+        height: 100dvh;
+      }
+
+      .loading {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://esm.sh/graphiql@4.0.0-canary-bab1879f.0/dist/style.css"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19.1.0",
+          "react-dom/client": "https://esm.sh/react-dom@19.1.0/client",
+          "graphiql": "https://esm.sh/graphiql@4.0.0-canary-bab1879f.0?standalone",
+          "@graphiql/toolkit": "https://esm.sh/@graphiql/toolkit@0.11.1"
+        }
+      }
+    </script>
+    <script type="module">
+      import { createElement } from 'react'
+      import { createRoot } from 'react-dom/client'
+      import { GraphiQL } from 'graphiql'
+      import { createGraphiQLFetcher } from '@graphiql/toolkit'
+
+      const fetcher = createGraphiQLFetcher({
+        url: 'https://countries.trevorblades.com'
+      })
+      const container = document.getElementById('graphiql')
+      const root = createRoot(container)
+      root.render(createElement(GraphiQL, { fetcher }))
+    </script>
+  </head>
+  <body>
+    <div id="graphiql">
+      <div class="loading">Loading…</div>
+    </div>
+  </body>
+</html>
