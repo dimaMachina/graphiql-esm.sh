@@ -74,7 +74,7 @@ To simplify imports, you can use [Import Maps](https://esm.sh/#using-import-maps
 
 ## Example
 
-You can try a working version of this setup in [examples/index.html](./examples/index.html).
+You can try a working version of this setup in [example/index.html](./example/index.html).
 
 To run the example locally:
 
