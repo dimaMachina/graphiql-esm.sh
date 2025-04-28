@@ -84,7 +84,7 @@ pnpm start
 
 This will start a local server and open the demo in your browser.
 
-> Make sure you have dependency installed by running `pnpm i`.
+> Make sure you have dependencies installed by running `pnpm i`.
 
 ## Notes
 
