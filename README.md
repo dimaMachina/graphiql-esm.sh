@@ -42,6 +42,10 @@ Add the following `<script>` to your HTML:
 </script>
 ```
 
+> [!TIP]
+>
+> The `?standalone` flag bundles the module along with all of its `dependencies`, excluding `peerDependencies`, into a single JavaScript file.
+
 ### 3. (Optional) Use Import Maps
 
 To simplify imports, you can use [Import Maps](https://esm.sh/#using-import-maps):
