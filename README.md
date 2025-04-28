@@ -1,16 +1,17 @@
-# GraphiQL 4 with React 19 via esm.sh CDN
+# Using GraphiQL 4 with React 19 via esm.sh CDN
 
-> TL;DR:
+> **TL;DR:**
 >
-> Time to say good buy for UMD builds 👋.
-
-Starting from React
-19, [they no longer produce UMD builds](https://react.dev/blog/2024/04/25/react-19-upgrade-guide#umd-builds-removed).
-Alternately they suggest of using an ESM-based CDN such as [esm.sh](https://esm.sh)
+> Time to say goodbye to UMD builds! 👋
+>
+> With React 19, [UMD builds have been removed](https://react.dev/blog/2024/04/25/react-19-upgrade-guide#umd-builds-removed).  
+> It’s recommended to use an ESM-based CDN like [esm.sh](https://esm.sh).
 
 ## Setup
 
-1. Add styles
+### 1. Add styles
+
+Include the GraphiQL stylesheet:
 
 ```html
 <link
@@ -19,7 +20,9 @@ Alternately they suggest of using an ESM-based CDN such as [esm.sh](https://esm.
 />
 ```
 
-2. Add a `<script>` tag to your HTML file to load React, ReactDOM, GraphiQL and GraphiQL Toolkit.
+### 2. Load React, ReactDOM, GraphiQL, and GraphiQL Toolkit
+
+Add the following `<script>` to your HTML:
 
 ```html
 <script type="module">
@@ -37,8 +40,9 @@ Alternately they suggest of using an ESM-based CDN such as [esm.sh](https://esm.
 </script>
 ```
 
-Alternatively, you can bare import specifiers instead of URLs
-via [import maps](https://esm.sh/#using-import-maps).
+### 3. (Optional) Use Import Maps
+
+To simplify imports, you can use [Import Maps](https://esm.sh/#using-import-maps):
 
 ```html
 <script type="importmap">
@@ -66,11 +70,14 @@ via [import maps](https://esm.sh/#using-import-maps).
 </script>
 ```
 
-> [!NOTE]
+## Notes
+
+> [!NOTE]  
+> You might see a console warning: `module "@emotion/is-prop-valid" not found`.
 >
-> You can ignore error in console saying `module "@emotion/is-prop-valid" not found`.
+> This is **safe to ignore**.
 >
-> Because it fallbacks to `isPropValid`, here is source code of this message:
+> Here’s the relevant source snippet:
 >
 > ```js
 > try {
@@ -84,3 +91,13 @@ via [import maps](https://esm.sh/#using-import-maps).
 >   // We don't need to actually do anything here - the fallback is the existing `isPropValid`.
 > }
 > ```
+
+## Final Result
+
+At the end, you will have a fully functional GraphiQL 4 instance running with React 19 — **without any UMD build needed**!
+
+## 📚 Resources
+
+- [esm.sh documentation](https://esm.sh)
+- [React 19 Upgrade Guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide)
+- [GraphiQL GitHub repository](https://github.com/graphql/graphiql)
